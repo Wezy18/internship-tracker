@@ -2,7 +2,7 @@
 
 A simple, user-friendly React application for tracking internship and job applications in one place. This app allows users to add applications, update their status, filter by progress, and keep track of next steps through a clean, intuitive interface.
 
-The project was built to strengthen my understanding of **modern React fundamentals** while emphasizing thoughtful UX, clear state management, and maintainable component design.
+The project was built to strengthen my understanding of modern React fundamentals while emphasizing thoughtful UX, clear state management, and maintainable component design.
 
 ## Features
 - View a centralized list of internship and job applications
