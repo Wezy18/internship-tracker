@@ -1,0 +1,219 @@
+/* Theme tokens */
+:root {
+  --bg1: #f7f7ff;       /* very light lavender */
+  --bg2: #f6fbff;       /* very light blue */
+  --card: rgba(255, 255, 255, 0.78);
+  --border: rgba(20, 40, 80, 0.10);
+  --text: #1f2a44;
+  --muted: rgba(31, 42, 68, 0.7);
+
+  --shadow: 0 10px 30px rgba(31, 42, 68, 0.08);
+
+  --radius: 18px;
+
+  /* pastel accents */
+  --accent: #7c9dff;    /* periwinkle */
+  --accent2: #7fe7d7;   /* mint */
+  --accent3: #ffb3c7;   /* soft pink */
+}
+
+/* Page + layout */
+.page {
+  min-height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+  padding: 28px 16px;
+  color: var(--text);
+  background: radial-gradient(1200px 600px at 20% 10%, #ffe7ef 0%, transparent 60%),
+              radial-gradient(1000px 700px at 90% 0%, #e7f1ff 0%, transparent 55%),
+              linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+  border-radius: 22px;  
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 18px;
+  padding: 18px 18px 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: -0.02em;
+}
+
+.header p {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+/* Main grid */
+.main {
+  display: grid;
+  gap: 16px;
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+/* Section header row (title + filter) */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+}
+
+/* Internship list grid */
+.grid {
+  display: grid;
+  gap: 12px;
+}
+
+/* Internship Card */
+.internshipCard {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(20, 40, 80, 0.08);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 6px 16px rgba(31, 42, 68, 0.06);
+}
+
+.internshipCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.internshipCard h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.muted {
+  margin: 8px 0 0 0;
+  color: var(--muted);
+}
+
+/* Badges */
+.badge {
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(20, 40, 80, 0.10);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.badge--interested {
+  background: rgba(255, 179, 199, 0.35);
+}
+
+.badge--applying {
+  background: rgba(124, 157, 255, 0.25);
+}
+
+.badge--submitted {
+  background: rgba(127, 231, 215, 0.35);
+}
+
+.badge--interviewing {
+  background: rgba(255, 224, 138, 0.35);
+}
+
+.badge--rejected {
+  background: rgba(31, 42, 68, 0.06);
+  color: rgba(31, 42, 68, 0.7);
+}
+
+/* Filter */
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+select {
+  border-radius: 12px;
+  border: 1px solid rgba(20, 40, 80, 0.10);
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px 12px;
+  color: var(--text);
+}
+
+/* Form */
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+.form label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.form input,
+.form select {
+  padding: 11px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(20, 40, 80, 0.10);
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--text);
+  outline: none;
+}
+
+.form input:focus,
+.form select:focus {
+  border-color: rgba(124, 157, 255, 0.55);
+  box-shadow: 0 0 0 4px rgba(124, 157, 255, 0.18);
+}
+
+/* Button */
+.form button {
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(20, 40, 80, 0.10);
+  background: linear-gradient(135deg, rgba(124, 157, 255, 0.55), rgba(127, 231, 215, 0.55));
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.08s ease, box-shadow 0.12s ease;
+  box-shadow: 0 10px 24px rgba(31, 42, 68, 0.10);
+}
+
+.form button:hover {
+  transform: translateY(-1px);
+}
+
+.form button:active {
+  transform: translateY(0px);
+}
+
+/* Footer */
+.footer {
+  margin-top: 18px;
+  color: var(--muted);
+  text-align: center;
+}
